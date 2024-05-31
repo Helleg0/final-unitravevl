@@ -17,6 +17,11 @@ import reactor.core.publisher.Mono;
 public class WebSecurityConfig {
     private final JwtAuthConverter jwtAuthConverter;
 
+    public static final String ADMIN = "admin";
+    public static final String ADMIN_ACCOMMODATION = "admin-accommodation";
+    public static final String CLIENT_USER = "client-user";
+
+
     @Bean
     public SecurityWebFilterChain securityFilterChain(ServerHttpSecurity http) {
         http.authorizeExchange(e ->
